@@ -1,0 +1,258 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #96c5d9;
+}
+.title {
+  background-color: #96c5d9;
+  opacity: 0.8;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-weight: bold;
+  
+}
+
+
+.container {
+background-color: #96c5d9;
+padding: 20px;
+color: #fff;
+position: relative;
+text-align: center;
+width: 500px;
+border-radius: 30px;
+background: #96c5d9;
+box-shadow:  20px 20px 60px #80a7b8,
+             -20px -20px 60px #ade3fa;
+}
+
+
+h1 {
+  letter-spacing: 2px;
+  margin: 0;
+  margin: 10px 0 10px;
+  text-transform: uppercase;
+}
+
+h3 {
+  border-bottom: 5px solid #fff;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  text-align: left;
+  color: azure;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: azure;
+}
+#balance {
+  color: azure;
+}
+
+.income-expense {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.income-expense > div {
+  flex: 1;
+  text-align: center;
+}
+
+/* .income-expense > div:first-of-type {
+  border-right: 0.5px solid rgb(0, 0, 0);
+} */
+
+.income,
+.expense,
+#balance {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 5px 0;
+  font-weight: bolder;
+}
+
+.income {
+  color: green;
+}
+.expense {
+  color: #c34234d3;
+}
+#balance {
+  color: rgb(72, 90, 255);
+}
+.bg-dark {
+  background-color: #96c5d9;
+  margin: 0 2px;
+
+  border-radius: 3px;
+}
+
+input[type="text"],
+input[type="number"] {  
+  /* display: block; */ 
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fff;
+  transition: 0.3s;
+}
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bolder;
+}
+
+.button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+.buttton {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttton:hover {
+  background-color: #E74C3C;
+  box-shadow: 0px 15px 20px rgba(231, 76, 60 , 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttton:active {
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background-color: #EC7063;
+  color:#fff;
+  outline: none;
+  border: none;
+  float: right;
+  transform: translateY(-3px);
+  margin-right: 5px;
+  border-radius: .2rem;
+  width: 33px;
+  height: 30px;
+}
+.delete-btn:hover {
+  background-color: #E74C3C;
+  cursor: pointer;
+  box-shadow: 0px 15px 20px rgba(231, 76, 60 , 0.4);
+  color: #fff;
+}
+
+ul {
+  list-style: inside;
+  display: block;
+  margin-right: 30px;
+  list-style-position: inside;
+  overflow: scroll;
+}
+ul li {
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: left;
+}
+
+.fa {
+  color: steelblue;
+}
+.fa:hover {
+  transform: rotate(20deg);
+}
+
+#error_msg {
+  color: red;
+  background-color: rgb(224, 189, 183);
+  font-weight: bolder;
+  padding: 0 10px;
+}
+
+.list {
+  color: azure;
+  height: 200px;
+}
+
+.minus,
+.plus {
+  margin-bottom: 8px;
+  border: 1px solid rgb(255, 255, 255);
+  color: #96c5d9;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.minus:hover,
+.plus:hover {
+  background-color: rgb(114, 114, 114);
+  cursor: pointer;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 999px) {
+  .container {
+    width: 100%;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    flex-direction: column-reverse;
+    border-radius: 0px;
+    background: #96c5d9;
+  }
+
+ 
+}
