@@ -18,7 +18,7 @@ let transactions =
 function addTransaction(e) {
   e.preventDefault();
 
-  if (text.value.trim() === "" || amount.value.trim() === "") {
+  if (text.value.trim() === "") {
     document.getElementById("error_msg").innerHTML =
       "<span >Error: Please enter description and amount!</span>";
     setTimeout(
@@ -29,19 +29,19 @@ function addTransaction(e) {
     const transaction = {
       id: generateID(),
       text: text.value,
-      amount: +amount.value,
+      amount: 0,
     };
 
     transactions.push(transaction);
 
     addTransactionDOM(transaction);
 
-    updateValues();
+    //updateValues();
 
     updateLocalStorage();
 
     text.value = "";
-    amount.value = "";
+    amount.value = 0;
   }
 }
 
@@ -53,7 +53,7 @@ function generateID() {
 // Transactions history
 function addTransactionDOM(transaction) {
   // Get sign
-  const sign = transaction.amount < 0 ? "-" : "+";
+  const sign = transaction.amount < 0 ? "" : "";
 
   const item = document.createElement("li");
 
@@ -61,9 +61,7 @@ function addTransactionDOM(transaction) {
   item.classList.add(transaction.amount < 0 ? "minus" : "plus");
 
   item.innerHTML = `
-    ${transaction.text} ${sign}${Math.abs(
-    transaction.amount
-  )} <button class="delete-btn" onclick="removeTransaction(${
+    ${transaction.text} <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
   })"><i class="fa-solid fa-trash-can"></i></button>
   `;
@@ -87,9 +85,9 @@ function updateValues() {
       .filter((value) => value < 0)
       .reduce((bal, value) => (bal += value), 0) * -(1).toFixed(2);
 
-  balance.innerText = `Ft${total}`;
-  inflow.innerText = `Ft${income}`;
-  outflow.innerText = `Ft${expense}`;
+  //balance.innerText = `Ft${total}`;
+  //inflow.innerText = `Ft${income}`;
+  //outflow.innerText = `Ft${expense}`;
 }
 
 // Remove transaction by ID
