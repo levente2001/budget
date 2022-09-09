@@ -13,7 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #96c5d9;
+  background-color: #fff;
 }
 .title {
   background-color: #96c5d9;
@@ -32,10 +32,10 @@ color: #fff;
 position: relative;
 text-align: center;
 width: 500px;
+border: 2px;
+border-color: #fff;
 border-radius: 30px;
 background: #96c5d9;
-box-shadow:  20px 20px 60px #80a7b8,
-             -20px -20px 60px #ade3fa;
 }
 
 
@@ -245,14 +245,17 @@ ul li {
 }
 
 
-@media only screen and (min-width: 320px) and (max-width: 999px) {
+@media only screen and (max-width: 600px) {
   .container {
     width: 100%;
-    margin-bottom: 80px;
-    margin-top: 20px;
+    height: 800;
     flex-direction: column-reverse;
-    border-radius: 0px;
+    border-radius: 20px;
     background: #96c5d9;
+  }
+  body{
+    background: #fff;
+    height: 100%;
   }
 
  
