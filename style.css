@@ -261,17 +261,6 @@ ul li {
     justify-content: center;
     align-items: center;
   }
-  .list {
-    color: azure;
-    height: 100%;
-  }
-  ul {
-    list-style: inside;
-    display: block;
-    margin-right: 30px;
-    list-style-position: inside;
-    overflow: scroll;
-  }
 
  
 }
